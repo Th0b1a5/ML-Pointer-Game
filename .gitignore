@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.vscode/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Large Datasets (generate with python3 dataset/generateData.py)
+dataset/*.csv
+
+# Gameplay runtime logs & performance benchmarks
+performance/*.csv
+!performance/.gitkeep
+
+# ONNX temporary / external split files
+*.onnx.data
+*.tmp
+*.log
