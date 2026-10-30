@@ -6,6 +6,9 @@ import pygame as pg
 import random as ran
 import time
 import math
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
+device = "NPU" # CHANGE THIS TO CHANGE TARGET PROCESSING DEVICE, "CPU" or "GPU" or "NPU" (if available)
 
 xWidth = 1000
 yWidth = 1000
@@ -43,9 +46,11 @@ def drawMan(size, cursorX, cursorY, ai_angle, real_angle, currXsize = 25, currYs
 
 if __name__ == '__main__':
     import openvino as ov
+    core = ov.Core()
 
-    device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
-    print(f"Using {device} device")
+    available_device = core.available_devices
+    device = device if device in available_device else "CPU"
+    print(f"Available {available_device} devices, using {device} device")
 
     model_name = input("Model to load: ")
     print("(normal - nor) for normal (random - ran) for random")
@@ -74,7 +79,6 @@ if __name__ == '__main__':
     ex_input = input_tensor = torch.tensor([[1, 2]], dtype=torch.float32)
     vino_model = ov.convert_model(model, example_input=ex_input)
     vino_model.reshape([1, 2])
-    core = ov.Core()
     npu_model = core.compile_model(vino_model, "NPU")
 
     while running:

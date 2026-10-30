@@ -8,15 +8,15 @@
 [![Hardware](https://img.shields.io/badge/Intel%20NPU-Accelerated-0071C5?style=flat-square&logo=intel&logoColor=white)](https://www.intel.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-An interactive Pygame machine learning experiment where a tiny custom neural network learns trigonometry from scratch—predicting the exact angle to the mouse cursor, accelerated on either the CPU via PyTorch or the **Intel NPU silicon via OpenVINO**.
+An interactive Pygame machine learning experiment where a tiny custom neural network learns trigonometry from scratch, predicting the exact angle to the mouse cursor, accelerated on either the CPU via PyTorch or the **Intel NPU silicon via OpenVINO**.
 
-> *Yes, it's partially LLM-assisted code, but this is a hands-on demo/self-learning project exploring neural nets, ONNX computation graphs, and NPU acceleration. Most of the logic, visuals, and architecture were built by me :)*
+> *Yes, it's partially LLM-assisted code, but I consider this as a hands-on demo/self-learning project exploring neural nets, ONNX computation graphs, and NPU acceleration. Most of the logic, visuals, and architecture were built by me :)*
 
 ---
 
 ## Architecture & Dataflow
 
-The model is a lightweight **337-parameter** multi-layer perceptron (MLP) trained to approximate NumPy's `np.arctan2(dy, dx)` (four-quadrant inverse tangent) purely through linear layers and non-linear ReLU activations.
+The model is a lightweight **337-parameter** multi-layer perceptron (MLP) trained to predict NumPy's `np.arctan2(dy, dx)` purely through linear layers and non-linear ReLU activations.
 
 ```mermaid
 flowchart LR
@@ -53,7 +53,7 @@ flowchart LR
 * **Inputs:** 2 (`dx`, `dy` distance from canvas center)
 * **Hidden Layers:** 2 layers with 16 neurons each
 * **Output:** 1 scalar (predicted angle in radians)
-* **Training Data:** Synthetically generated `(x, y)` coordinate pairs mapped to ground-truth angles.
+* **Training Data:** Generated `(x, y)` coordinate pairs
 
 ### Model Naming Convention
 Pre-trained checkpoints in `models/` follow the pattern:
