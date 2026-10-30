@@ -1,12 +1,12 @@
 # Simple ML Pointer Game
 
-[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://python.org)
-[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
-[![OpenVINO](https://img.shields.io/badge/OpenVINO-2026-0071C5?logo=intel&logoColor=white)](https://openvino.ai)
-[![ONNX](https://img.shields.io/badge/ONNX-Standard-005CED?logo=onnx&logoColor=white)](https://onnx.ai)
-[![Pygame](https://img.shields.io/badge/Pygame--ce-2.5%2B-brightgreen?logo=python)](https://pyga.me)
-[![Hardware](https://img.shields.io/badge/Intel%20NPU-Accelerated-blue?logo=intel)](https://www.intel.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![OpenVINO](https://img.shields.io/badge/OpenVINO-2026-0071C5?style=flat-square&logo=intel&logoColor=white)](https://openvino.ai)
+[![ONNX](https://img.shields.io/badge/ONNX-Standard-005CED?style=flat-square&logo=onnx&logoColor=white)](https://onnx.ai)
+[![Pygame](https://img.shields.io/badge/Pygame--ce-2.5%2B-brightgreen?style=flat-square&logo=python&logoColor=white)](https://pyga.me)
+[![Hardware](https://img.shields.io/badge/Intel%20NPU-Accelerated-0071C5?style=flat-square&logo=intel&logoColor=white)](https://www.intel.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 An interactive Pygame machine learning experiment where a tiny custom neural network learns trigonometry from scratch—predicting the exact angle to the mouse cursor, accelerated on either the CPU via PyTorch or the **Intel NPU silicon via OpenVINO**.
 
